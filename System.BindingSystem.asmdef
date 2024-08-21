@@ -1,0 +1,16 @@
+{
+    "name": "System.BindingSystem",
+    "rootNamespace": "",
+    "references": [
+        "GUID:75be4d86a484b404c84223604352ec2c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
