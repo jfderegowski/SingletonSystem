@@ -1,5 +1,5 @@
 ﻿{
-  "name": "com.noreleasedate.singlettonsystem",
+  "name": "com.noreleasedate.singletonsystem",
   "version": "1.0.0",
   "displayName": "SingletonSystem",
   "description": "A simple singleton system for Unity. You can use instance in Awake() method and in most cases wont have a null reference exception.",
