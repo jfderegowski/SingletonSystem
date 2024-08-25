@@ -1,0 +1,14 @@
+{
+    "name": "SingletonSystem.Editor",
+    "rootNamespace": "SingletonSystem",
+    "references": ["GUID:26ec800c5551ad547a45c9ce3e908543"],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
