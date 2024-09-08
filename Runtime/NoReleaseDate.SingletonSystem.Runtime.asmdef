@@ -1,7 +1,7 @@
 {
-    "name": "SingletonSystem.Editor",
-    "rootNamespace": "SingletonSystem",
-    "references": ["GUID:26ec800c5551ad547a45c9ce3e908543"],
+    "name": "NoReleaseDate.SingletonSystem.Runtime",
+    "rootNamespace": "NoReleaseDate.SingletonSystem.Runtime",
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

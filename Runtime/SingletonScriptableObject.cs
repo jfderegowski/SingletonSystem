@@ -1,18 +1,18 @@
 ﻿using System.Linq;
 using UnityEngine;
 
-namespace SingletonSystem.Runtime
+namespace NoReleaseDate.SingletonSystem.Runtime
 {
     /// <summary>
     /// Base class for scriptable object singletons.
     /// </summary>
-    public abstract class ScriptableObjectSingleton : ScriptableObject { }
+    public abstract class SingletonScriptableObject : ScriptableObject { }
 
     /// <summary>
     /// Adds singleton functionality to a scriptable object.
     /// </summary>
     /// <typeparam name="T">The type of the scriptable object singleton.</typeparam>
-    public abstract class ScriptableObjectSingleton<T> : ScriptableObjectSingleton where T : ScriptableObjectSingleton<T>
+    public abstract class SingletonScriptableObject<T> : SingletonScriptableObject where T : SingletonScriptableObject<T>
     {
         /// <summary>
         /// The instance of the scriptable object singleton.
@@ -23,8 +23,8 @@ namespace SingletonSystem.Runtime
             {
                 if (_instance) return _instance;
 
-                if (SingletonsCollection._instance)
-                    foreach (var soSingleton in SingletonsCollection._instance.scriptableObjectSingletons.Where(
+                if (Collection._instance)
+                    foreach (var soSingleton in Collection._instance.scriptableObjectSingletons.Where(
                                  soSingleton => soSingleton.GetType() == typeof(T)))
                         return _instance = soSingleton as T;
 

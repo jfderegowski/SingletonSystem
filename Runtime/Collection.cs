@@ -2,12 +2,12 @@
 using System.Linq;
 using UnityEngine;
 
-namespace SingletonSystem.Runtime
+namespace NoReleaseDate.SingletonSystem.Runtime
 {
     /// <summary>
     /// Collection of all singletons.
     /// </summary>
-    public class SingletonsCollection : ScriptableObjectSingleton<SingletonsCollection>
+    public class Collection : SingletonScriptableObject<Collection>
     {
         /// <summary>
         /// The list of all singletons.
@@ -19,7 +19,7 @@ namespace SingletonSystem.Runtime
         /// The list of all scriptable object singletons.
         /// </summary>
         [field: SerializeField, Tooltip("Add a scriptable object singleton to the list and it will be get from there.")]
-        public List<ScriptableObjectSingleton> scriptableObjectSingletons { get; private set; } = new();
+        public List<SingletonScriptableObject> scriptableObjectSingletons { get; private set; } = new();
         
         private void OnValidate() => CheckForDuplicates();
 
@@ -138,7 +138,7 @@ namespace SingletonSystem.Runtime
             }
 
             Debug.Log($"[SingletonSystem] No found singleton of type {typeof(T).Name}. Calling Object.FindObjectOfType<T>()");
-            var findObject = FindObjectOfType<T>();
+            var findObject = FindFirstObjectByType<T>();
 
             return findObject ? findObject : new GameObject(typeof(T).Name).AddComponent<T>();
         }

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace SingletonSystem.Runtime
+namespace NoReleaseDate.SingletonSystem.Runtime
 {
     /// <summary>
     /// Base class for all singletons.
@@ -34,7 +34,7 @@ namespace SingletonSystem.Runtime
             {
                 if (_instance) return _instance;
 
-                _instance = SingletonsCollection.Get<T>();
+                _instance = Collection.Get<T>();
 
                 return _instance;
             }
@@ -55,7 +55,7 @@ namespace SingletonSystem.Runtime
         /// Remember to call base.OnDestroy() when overriding this method.
         /// Otherwise, the singleton will not be unregistered.
         /// </summary>
-        protected virtual void OnDestroy() => SingletonsCollection.UnRegister(this);
+        protected virtual void OnDestroy() => Collection.UnRegister(this);
 
         /// <summary>
         /// Initializes the singleton
@@ -70,7 +70,7 @@ namespace SingletonSystem.Runtime
             else if (!_instance)
             {
                 _instance = GetComponent<T>();
-                SingletonsCollection.Register(this);
+                Collection.Register(this);
             }
         }
     }
